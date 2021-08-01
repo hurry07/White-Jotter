@@ -21,7 +21,7 @@ import java.util.List;
 @Entity
 @Table(name = "user")
 @ToString
-@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class User {
 
     @Id
@@ -57,7 +57,7 @@ public class User {
 
     /**
      * Email address.
-     *
+     * <p>
      * A Email address can be null,but should be correct if exists.
      */
     @Email(message = "请输入正确的邮箱")

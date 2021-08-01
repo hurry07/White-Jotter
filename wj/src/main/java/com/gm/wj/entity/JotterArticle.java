@@ -19,7 +19,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "jotter_article")
 @ToString
-@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class JotterArticle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

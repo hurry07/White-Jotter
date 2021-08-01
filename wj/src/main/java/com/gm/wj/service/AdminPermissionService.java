@@ -29,17 +29,20 @@ public class AdminPermissionService {
     @Autowired
     UserService userService;
 
-    public List<AdminPermission> list() {return adminPermissionDAO.findAll();}
+    public List<AdminPermission> list() {
+        return adminPermissionDAO.findAll();
+    }
 
     /**
      * Determine whether client requires permission when requests
      * a certain API.
+     *
      * @param requestAPI API requested by client
      * @return true when requestAPI is found in the DB
      */
     public boolean needFilter(String requestAPI) {
         List<AdminPermission> ps = adminPermissionDAO.findAll();
-        for (AdminPermission p: ps) {
+        for (AdminPermission p : ps) {
             // match prefix
             if (requestAPI.startsWith(p.getUrl())) {
                 return true;

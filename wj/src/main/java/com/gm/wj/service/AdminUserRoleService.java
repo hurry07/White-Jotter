@@ -23,7 +23,7 @@ public class AdminUserRoleService {
         return adminUserRoleDAO.findAllByUid(uid);
     }
 
-//    @Modifying
+    //    @Modifying
     @Transactional
     public void saveRoleChanges(int uid, List<AdminRole> roles) {
         adminUserRoleDAO.deleteAllByUid(uid);

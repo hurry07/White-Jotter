@@ -23,8 +23,8 @@ import java.io.Serializable;
 @Entity
 @Table(name = "category")
 @ToString
-@JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
-public class Category{
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

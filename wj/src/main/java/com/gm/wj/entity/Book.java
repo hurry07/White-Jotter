@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "book")
 @ToString
-@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,6 +59,6 @@ public class Book {
      * Category id.
      */
     @ManyToOne
-    @JoinColumn(name="cid")
+    @JoinColumn(name = "cid")
     private Category category;
 }
